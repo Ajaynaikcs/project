@@ -1,2 +1,2 @@
-# project2
+# project
 *DLITHE INTERNSHIP ACTIVITY* = Bus reservation system
