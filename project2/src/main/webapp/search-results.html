@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Result</title>
+    <style>
+        /* CSS styles */
+        /* Styles remain the same */
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Header section remains the same -->
+    </header>
+
+    <section class="hero">
+        <form id="bookingForm" action="bookingservlet" method="POST"> <!-- Replace "BookingServlet" with your actual servlet URL -->
+            <!-- Input fields and button remain the same -->
+        </form>
+    </section>
+
+    <!-- Booking Result Section -->
+    <section class="booking-result">
+        <h2>Booking Result</h2>
+        <p>Here are the details of your booking:</p>
+        <!-- Display booking details here -->
+        <p id="bookingDetails"></p>
+    </section>
+
+    <!-- JavaScript to populate destination dropdown -->
+    <script>
+        // Sample list of destinations and functions remain the same
+
+        // Get the form element
+        const bookingForm = document.getElementById("bookingForm");
+
+        // Add event listener for form submission
+        bookingForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            const form = event.target;
+
+            // Do any form validation if needed
+
+            // Submit the form using fetch API
+            fetch(form.action, {
+                method: form.method,
+                body: new URLSearchParams(new FormData(form)) // Serialize form data
+            })
+            .then(response => {
+                // Handle response based on status
+                if (response.ok) {
+                    // Redirect to search result page
+                    window.location.href = "search-result.html";
+                } else {
+                    // Handle error response
+                    console.error("Error:", response.statusText);
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        });
+    </script>
+</body>
+</html>

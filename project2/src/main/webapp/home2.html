@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Enter information</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        position: relative; /* Add relative positioning to the body */
+    }
+
+    img {
+        width: 100%; /* Set the width to 100% */
+        height: 100%; /* Set the height to 100% */
+        position: fixed; /* Set the position to fixed */
+        top: 0;
+        left: 0;
+        z-index: -1; /* Set z-index lower than other elements */
+        object-fit: cover; /* Maintain aspect ratio and cover the container */
+    }
+
+    .navbar {
+        padding: 10px;
+        margin: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none; /* Remove default list styles */
+    }
+
+    .navbar a {
+        text-decoration: none; /* Remove underline from links */
+        color: darkblue;
+    }
+
+    .navbar a:hover {
+        text-decoration: underline; /* Add underline on hover */
+    }
+
+    h1 {
+        text-align: center; /* Center align the heading */
+        color: darkblue;
+        background-color: #00FFFF; /* Background color for h1 */
+        padding: 10px; /* Add padding to the heading */
+    }
+
+   footer {
+        background-color: cornsilk;
+        padding: 10px;
+        text-align: center;
+        position: fixed; /* Set the position to fixed */
+        bottom: 0; /* Position at the bottom */
+        width: 100%; /* Set width to 100% */
+    }
+    
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+        border-radius:30px;
+    }
+    
+    /* Additional CSS for the button to add user information */
+    .navbar button.add-user-info {
+        background-color: #28a745; /* Green background color */
+    }
+
+    .navbar button.add-user-info:hover {
+        background-color: #218838; /* Darker green color on hover */
+    }
+
+    .navbar button.add-user-info:focus {
+        outline: none; /* Remove focus outline */
+    }
+
+    .navbar button.add-user-info:active {
+        background-color: #1e7e34; /* Darker green color on active state */
+    }
+
+    /* Additional CSS to position the Book Now button */
+    .book-now-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+</head>
+<body>
+<img src="assets/images/user2.jpg" />
+<h1>Bus Reservation System</h1>
+<header>
+    <ul class="navbar">
+        <li><button onclick="window.location.href='dashboard.html'">Home</button></li>
+        <li><button class="add-user-info" onclick="window.location.href='user.jsp'">Add User Information</button></li>
+        <li><button class="add-user-info" onclick="window.location.href='viewinfo.jsp'">View Info</button></li>
+      	<li><button class="add-user-info" onclick="window.location.href='delete.jsp'">Edit Info</button></li>  
+     
+        <li><button class="booknow" onclick="window.location.href='booknow.jsp'" class="book-now-button">Book Now</button></li>
+        <li><button class="viewnow" onclick="window.location.href='view.jsp'" class="book-now-button">View booking</button></li>
+         <li><button class="viewnow" onclick="window.location.href='editbooking.jsp'" class="book-now-button">Edit booking</button></li>
+         <li><button onclick="window.location.href='seatbooking.jsp'" class="menu-button">Seat Booking</button></li>
+  
+        
+    </ul>
+</header>
+<footer>
+    <p>This is the footer content.</p>
+</footer>
+</body>
+</html>

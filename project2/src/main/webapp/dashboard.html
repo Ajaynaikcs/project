@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+       
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        .menu li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .menu li:last-child {
+            margin-right: 0;
+        }
+        .menu li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+        }
+        .menu li a:hover {
+            color: #4CAF50;
+            background-color: #f0f0f0;
+            border-color: #ddd;
+        }
+
+        /* Logout button */
+        .logout-btn {
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        /* Stylish logout alert */
+        .logout-alert {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to the Dashboard</h2>
+        <ul class="menu">
+            <li><a href="welcomepage.html">Home</a></li>
+            <li><a href="home2.html">User</a></li>
+            <li><a href="home.html">Admin</a></li>
+       
+            <li><button class="logout-btn" onclick="logout()">Logout</button></li>
+        </ul>
+        <div id="dashboard-content">
+            <img src="assets/images/bus reservation.png" alt="Welcome Image">
+            <!-- Dashboard content will be filled dynamically -->
+        </div>
+    </div>
+
+   <script>
+    function logout() {
+        // Redirect to the login page
+        window.location.href = "login.html";
+    }
+</script>
+
+</body>
+</html>

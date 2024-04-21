@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Result</title>
+    <style>
+        /* CSS styles */
+        /* Your existing CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .booking-result {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-result h2 {
+            margin-bottom: 10px;
+        }
+
+        .booking-result p {
+            margin-bottom: 20px;
+        }
+
+        .booking-result div {
+            margin-bottom: 10px;
+        }
+
+        .booking-result strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="booking-result">
+        <h2>Booking Result</h2>
+        <p>Your seat has been successfully booked!</p>
+        <div>
+            <strong>Bus ID:1</strong> <span id="bus_id"></span><br>
+            <strong>Seat Number:2</strong> <span id="seat_number"></span><br>
+            <strong>Passenger Name:shreyas</strong> <span id="passenger_name"></span><br>
+        </div>
+    </div>
+
+    <!-- JavaScript to display booking details -->
+    <script>
+        // Get booking details from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const busId = urlParams.get("bus_id");
+        const seatNumber = urlParams.get("seat_number");
+        const passengerName = urlParams.get("passenger_name");
+
+        // Display booking details on the page
+        document.getElementById("bus_id").innerText = busId;
+        document.getElementById("seat_number").innerText = seatNumber;
+        document.getElementById("passenger_name").innerText = passengerName;
+    </script>
+</body>
+</html>
